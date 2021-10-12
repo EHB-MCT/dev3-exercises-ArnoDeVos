@@ -21,18 +21,36 @@ fun step1(){
     val firstStep = setOf<String>("window", "cellar")
     val userAnswer = readLine()
     if(firstStep.contains(userAnswer)) {
-        succes()
+        challenge2()
     }else{
         gameOver()
     }
 }
 
-fun succes(){
-    println("You were able to enter, congrats")
-}
+//fun succes(){
+    //println("You were able to enter, congrats")
+//}
 fun gameOver1(){
-    println("Wrong choice, security is coming!!!")
+    println("Wrong building, security is coming!!!")
 }
 fun gameOver(){
     println("Wrong choice, security is coming!!!")
+}
+fun challenge2(){
+    println("You entered the building")
+    println("What do you want to steal?")
+    println("computer, teacher or servers")
+    val correctAnswers1 = setOf<String>("computer","servers")
+    val userAnswer1 = readLine()
+    if(correctAnswers1.contains(userAnswer1)){
+        money()
+    }else{
+        gameOver2()
+    }
+}
+fun money(){
+    println("well done, now it's time to find a buyer")
+}
+fun gameOver2(){
+    println("Wrong choice, who the hell wants to pay randsom for him?!?")
 }
