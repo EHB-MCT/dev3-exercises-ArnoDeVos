@@ -54,3 +54,13 @@ fun money(){
 fun gameOver2(){
     println("Wrong choice, who the hell wants to pay randsom for him?!?")
 }
+
+/*demo
+fun challengeTwo(){
+    val userGuess = readLine()
+    val diceResult = (1..6).random()
+    // todo: check == problem for strings
+    if (diceResult >=)
+    if
+}
+ */
