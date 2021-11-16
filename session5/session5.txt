@@ -1,0 +1,14 @@
+SELECT * From products WHERE productCode= 'S24_3856'
+Answer="1956 Porsche 356A Coupe"
+
+select AVG(MSRP) from products
+Answer=100.438727
+
+SELECT count(*) FROM products WHERE productName LIKE "%Ford%"
+Answer="15"
+
+SELECT MAX(MSRP) FROM products
+Answer=214.30
+
+SELECT count(*) FROM products WHERE productLine="ships"
+Answer="9"
