@@ -1,3 +1,5 @@
+BATCH 1
+
 SELECT * From products WHERE productCode= 'S24_3856'
 Answer="1956 Porsche 356A Coupe"
 
@@ -12,3 +14,31 @@ Answer=214.30
 
 SELECT count(*) FROM products WHERE productLine="ships"
 Answer="9"
+
+
+
+
+
+
+BATCH 2
+
+SELECT COUNT(*) FROM orders WHERE customerNumber= '328'
+Answer="3"
+
+SELECT COUNT(*) from customers
+LEFT JOIN orders ON orders.customerNumber = customers.customerNumber
+WHERE contactFirstName = 'Julie' AND contactLastName = 'Young'
+Answer="3"
+
+SELECT COUNT(*) FROM customers
+	WHERE customers.creditLimit='0%' AND customers.country='USA';
+Answer= "1"
+
+SELECT customers.customerName, AVG(amount) AS average FROM customers
+INNER JOIN payments on payments.customerNumber = customers.customerNumber
+GROUP BY customers.customerNumber
+ORDER BY average DESC
+LIMIT 1
+Answer= Collectable Mini Designs Co.	80375.240000
+
+BATCH 3
