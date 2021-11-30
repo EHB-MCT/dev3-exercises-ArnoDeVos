@@ -15,18 +15,22 @@ class Duolingo {
     fun play(){
         words.random()
         val currentWords = words.shuffled().take(5).toMutableSet()
+        //to mutableset => maakt ze aanpasbaar
+        // sets zijn standaard niet aanpasbaar
 
         while (currentWords.isNotEmpty()){
+            // zolang ze niet leeg is blijven we vragen stellen aan de gebruiker
 
 
-        val selectedWord = currentWords.random()
-        println("What is the translation of ${selectedWord.original}")
-        val userAnswer = readLine()
+            val selectedWord = currentWords.random()
+            println("What is the translation of ${selectedWord.original}")
+            val userAnswer = readLine()
 
-        if (selectedWord.translated == userAnswer){
-            currentWords.remove(selectedWord)
+            if (selectedWord.translated == userAnswer){
+                currentWords.remove(selectedWord)
+            }
+            println(currentWords.count())
         }
-        println(currentWords.count())
-}
         println("good job")
-}}
+    }
+}
