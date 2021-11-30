@@ -1,2 +1,2 @@
-class Word (val original: string, val translated: string, val language: string) {
+class Word (val original: String, val translated: String, val language: String) {
 }
