@@ -14,10 +14,19 @@ class Duolingo {
 
     fun play(){
         words.random()
-        val currentWords = words.take(5)
-        words.shuffle()
-        currentWords.forEach{
+        val currentWords = words.shuffled().take(5).toMutableSet()
 
+        while (currentWords.isNotEmpty()){
+
+
+        val selectedWord = currentWords.random()
+        println("What is the translation of ${selectedWord.original}")
+        val userAnswer = readLine()
+
+        if (selectedWord.translated == userAnswer){
+            currentWords.remove(selectedWord)
         }
-        println(currentWords)
+        println(currentWords.count())
+}
+        println("good job")
 }}
