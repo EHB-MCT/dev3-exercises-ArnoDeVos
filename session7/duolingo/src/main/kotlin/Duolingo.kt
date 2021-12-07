@@ -1,15 +1,15 @@
 class Duolingo(val roundSize: Int = 5, val language: String = "french") {
     var words = mutableListOf<Word>(
-        Word ("bonjour", "hallo", "french"),
-        Word ("a bientôt", "tot ziens", "french"),
-        Word ("ami", "vriend", "french"),
-        Word ("voiture", "auto", "french"),
-        Word ("téléphone","telefoon","french"),
-        Word ("zéro","nul","french"),
-        Word ("mardi","dinsdag","french"),
-        Word ("french fries","frieten","english"),
-        Word ("cat","kat","english"),
-        Word ("hoodie","trui","english")
+        FrenchWord ("bonjour", "hallo"),
+        FrenchWord("a bientôt", "tot ziens"),
+        FrenchWord ("ami", "vriend"),
+        FrenchWord ("voiture", "auto"),
+        FrenchWord ("téléphone","telefoon"),
+        FrenchWord ("zéro","nul"),
+        FrenchWord ("mardi","dinsdag"),
+        FrenchWord ("french fries","frieten"),
+        EnglishWord ("cat","kat"),
+        EnglishWord ("hoodie","trui"),
     )
 
         init {
